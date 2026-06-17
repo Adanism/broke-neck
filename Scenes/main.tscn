@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c0aaydqfsg8qj"]
+
+[ext_resource type="PackedScene" uid="uid://bdwga7f4kg1c0" path="res://Scenes/player_character.tscn" id="1_jjgbg"]
+
+[sub_resource type="Environment" id="Environment_ig7tw"]
+
+[node name="Main" type="Node3D" unique_id=1593933574]
+
+[node name="Floor" type="Node3D" parent="." unique_id=2056072481]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Floor" unique_id=1463000482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.829834, -0.4995, -1.0142517)
+use_collision = true
+size = Vector3(10, 1, 10)
+
+[node name="Player_Character" parent="." unique_id=2009346969 instance=ExtResource("1_jjgbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4613159, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2125191958]
+environment = SubResource("Environment_ig7tw")
